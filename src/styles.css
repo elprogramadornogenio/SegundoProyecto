@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
+.siderbar {
+    /*  height = altura que va a ocupar en la pantalla por ejemplo 100vh el siderbar
+        ocupa toda la pantalla.
+
+        min-height = altura minima que va ocupar despues de que la pantalla cambie de
+        tamaño con los 100vh va a ocupar en porcentaje el 100% de la pantalla.
+
+        min-width = al ancho del siderbar que es de 30% del 100% de la altura es decir que
+        el valor es relativo a la altura del dispositivo
+
+    */
+    height: 100%;
+    min-height: 100vh;
+    min-width: 180px;
+    text-align: center;
+}
+
+.card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+button {
+    margin: 5px;
+}
+
+a {
+    margin: 2px;
+}
+
+
+
+

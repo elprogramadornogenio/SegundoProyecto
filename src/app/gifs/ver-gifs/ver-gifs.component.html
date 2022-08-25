@@ -1,0 +1,47 @@
+<div *ngIf="this.gif.length===0; else noGif" class="alert alert-info">
+    Espere por favor
+</div>
+
+<ng-template class="container" #noGif>
+    <div class="row">
+        <div class="col-12">
+            <h1>{{this.gif[0].title}}</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Imagen Gif</h3>
+            <hr>
+            <img 
+                [src]="this.gif[0].images.downsized_medium.url" 
+                [alt]="this.gif[0].title"
+                class="img-thumbnail animate__animated animate__swing"
+            >
+        </div>
+        <div class="col">
+            <h3>Información</h3>
+            <hr>
+            <ul class="list-group col-8">
+                <li class="list-group-item">
+                    <strong>Id:</strong> {{this.gif[0].id}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Rating:</strong> {{this.gif[0].rating}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Username:</strong> {{this.gif[0].username || "Desconocido"}}
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col">
+                    <button [routerLink]="['']" class="btn btn-danger">Retornar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</ng-template>
+
+

@@ -1,0 +1,22 @@
+<h5>Buscar:</h5>
+
+<!-- NgModel -->
+<!-- <input 
+    type="text" 
+    value="" 
+    [(ngModel)]="txtBuscar"
+    class="form-control" 
+    placeholder="Buscar Gifs..."
+    (keyup.a)="buscar()"
+> -->
+
+
+<!-- @ViewChild -->
+<input 
+    type="text" 
+    value="" 
+    class="form-control" 
+    placeholder="Buscar Gifs..."
+    (keyup.enter)="buscar()"
+    #busqueda
+>
